@@ -1,0 +1,125 @@
+/* PrismJS VSCode Dark+ inspired theme */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #d4d4d4;
+  background: #1e1e1e;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 1em;
+  line-height: 1.5;
+  text-shadow: none;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  tab-size: 4;
+  hyphens: none;
+  border-radius: 4px;
+  padding: 1em;
+}
+
+/* Selection */
+pre[class*="language-"] ::selection, 
+pre[class*="language-"]::selection, 
+code[class*="language-"] ::selection, 
+code[class*="language-"]::selection {
+  background: #264f78;
+}
+
+/* Tokens */
+.token.comment,
+.token.prolog,
+.token.cdata {
+  color: #6a9955;
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #d4d4d4;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #569cd6;
+}
+
+.token.number {
+  color: #b5cea8;
+}
+
+.token.boolean {
+  color: #569cd6;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #ce9178;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #d4d4d4;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #c586c0;
+}
+
+.token.function,
+.token.class-name {
+  color: #dcdcaa;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #d16969;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+/* Code blocks and inline code */
+pre[class*="language-"] {
+  background: #1e1e1e;
+  border: 1px solid #333;
+}
+
+:not(pre) > code[class*="language-"] {
+  background: #1e1e1e;
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+  border: 1px solid #333;
+}
+
+/* Line numbers plugin (optional) */
+.line-numbers .line-numbers-rows {
+  border-right: 1px solid #444;
+  background: #1e1e1e;
+}
+
+.line-numbers-rows > span:before {
+  color: #444;
+}

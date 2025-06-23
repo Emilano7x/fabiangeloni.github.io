@@ -1,0 +1,156 @@
+
+
+*{box-sizing:border-box;
+      margin:0px;
+      padding:0px;}
+
+ body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #20212f;
+      margin:0px 0px 0px 20px;
+      padding:0px;
+      color: white;
+    }
+
+     /* Checkbox oculto para controlar el estado */
+    #toggle-menu {
+      display: none;
+    }
+
+    /* Botón de pestaña vertical */
+    .toggle-label {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: #333;
+      color: white;
+      padding: 10px 5px;
+      cursor: pointer;
+      z-index: 1001;
+      writing-mode: vertical-rl;
+      text-align: center;
+      border-radius: 0 5px 5px 0;
+      user-select: none;
+      margin-left: 0px;
+      transition: background 0.3s;
+    }
+
+    .toggle-label:hover {
+      background: #555;
+    }
+
+    /* Panel lateral */
+    .side-panel {
+      position: fixed;
+      top: 0;
+      left: -360px; /* fuera de pantalla por defecto */
+      width: 350px;
+      height: 100vh;
+      background: rgba(250, 250, 250, 0.9);
+      padding: 20px 15px 20px 35px;
+      box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+      transition: left 0.4s ease;
+      z-index: 1000;
+      color: black;
+      overflow-y: auto;
+      font-size: 13PX;
+      line-height: 15px;
+      font-weight: 600;
+    }
+
+    /* Mostrar panel cuando el checkbox está activado */
+    #toggle-menu:checked ~ .side-panel {
+      left: 0;
+    }
+
+    /* Animación extra: contenido que se mueve suavemente si querés */
+    .main-content {
+      padding: 2rem;
+    }
+
+header{width:100%; background-color: rgb(24, 24, 24); padding:10px; overflow: auto; margin-bottom: 10px; padding: 30px 10px; margin-left:-10px}
+h1{float: left;}
+h2{color: aqua;}
+h4{float: right; margin-top:7px}
+
+.amarillo, .txt_presionaBoton{
+  color: yellow;}
+
+  .parrafo{ white-space: pre-line} /* para que funcionen los saltos de linea \n en los enunciados */ 
+
+.contenedor{width:49%; height:auto; overflow:auto; float:left;
+            scrollbar-width: none; /* Firefox */           
+            -ms-overflow-style: none; /* IE y Edge */}                
+                                          
+.contenedor::-webkit-scrollbar {    /* para que desaparezca la barra scroll inferior, junto a las 2 lineas de arriba */
+  display: none; /* Chrome, Safari, Opera */
+}
+
+code-input {
+    min-width: 100%;
+      max-width: 100%;
+      height: 200px;
+      max-height: 250px;
+      font-family: monospace;
+      font-size: 14px;
+      --padding: 10px;
+      margin:0px 0px 30px 20px;
+      float: left;
+      background-color: #1c1d1f;
+      color: rgb(173, 180, 141);
+     
+}
+
+/* no funciona cambiar de color  */
+ code-input::placeholder { color: rgb(216, 216, 226); }
+
+ 
+
+
+    .editor {
+      min-width: 100%;
+      max-width: 100%;
+      height: 200px;
+      max-height: 250px;
+      text-align: left;
+      
+      
+    }
+
+    .clear{clear: both; margin-bottom: 10px;}
+
+    .wrap{margin:40px auto;
+          border-bottom: 1px solid #ccc;
+          overflow: auto;
+          text-align: center;
+        }
+
+    iframe {
+      width: 95%;
+      min-height: 500px;
+      border: 1px solid #ccc;
+      background-color: white;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      float:right;
+      margin:10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    label {
+      font-weight: bold;
+      margin: 10px 0px -30px 30px;
+    }

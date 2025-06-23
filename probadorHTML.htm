@@ -1,0 +1,147 @@
+ <!DOCTYPE html>
+<html lang="es" class="no-touch"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="archivosYestilos/style.css">
+  <meta charset="UTF-8">
+  <title>Editor HTML y CSS</title>
+
+
+  <!-- ----------------------------------------------------------------------------------------------------------------------------------------- -->
+  <link rel="stylesheet" href="code-input.min.css">  
+  <script src="code-input.min.js"></script>
+
+  <!-- PrismJS para resaltado -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/prism.min.js"></script>
+        <!-- plugins de prismjs -->
+      <script src="plugins/indent.js"></script>
+      <script src="plugins/auto-close-brackets.js"></script>
+
+
+  <link rel="stylesheet" href="prism-vscode-dark.css"> <!-- resaltado que tiene vscode -->
+
+  
+  <!--Register code-input template-->
+    <script>
+      codeInput.registerTemplate("syntax-highlighted", 
+        codeInput.templates.prism(Prism, [
+              new codeInput.plugins.AutoCloseBrackets(), 
+              new codeInput.plugins.Indent(true, 2)] // 2 spaces indentation 
+            ));
+
+
+            
+    </script>
+
+  <!-- ----------------------------------------------------------------------------------------------------------------------------------------- -->
+
+</head>
+<body>
+  
+  <!-- Toggle -->
+  <input type="checkbox" id="toggle-menu">
+  <label for="toggle-menu" class="toggle-label">AYUDA SINTAXIS</label>
+
+  <!-- Panel lateral -->
+  <div class="side-panel">
+    <h3>SINTAXIS DIV</h3>
+    <p><code>	&lt;div&gt;Contenido del div&lt;/div&gt;</code></p>
+    <br>
+    <h3>AGREGAR CLASE</h3>
+    <p><code>	&lt;div class="nombreclase"&gt;Contenido del div&lt;/div&gt;</code></p>
+    <br>
+    <h3>AGREGAR IMAGEN</h3>
+    <p><code>	&lt;img src="www.ejemplo.com/imagen.jpg"&gt;</code></p>
+    <br>
+    <h3>EJEMPLO IMAGEN DENTRO DE DIV</h3>
+    <p><code>	&lt;div&gt;</code></p><p><code> &lt;img src="www.ejemplo.com/imagen.jpg"&gt;</code></p><p><code>&lt;/div&gt;</code></p>
+    <br>
+    <h3>SINTAXIS CSS</h3>
+    <p>.nombreclase{atributo:valor; atributo2:valor2;}</p>
+    <br>
+    <h3>CSS DE LA CLASE</h3>
+    <p>Debe llamarse igual y comienza con un punto .</p>
+    <br>
+    <p>.nombreclase{atributo:valor;atributo2:valor;}</p>
+    <br>
+    <h3>ATRIBUTOS CSS MAS COMUNES</h3>
+    <p>ANCHO: width   (px o %)</p>
+     <p>ALTO: height   (px o %)</p>
+      <p>COLOR DE FONDO: background-color</p>
+       <p>COLOR DE TEXTO: color</p>
+        <p>TAMAÑO TEXTO: font-size  (px)</p>
+         <p>ALINEAR TEXTO: text-align   (left, right, center)</p>
+         <p>MARGEN EXTERNO: margin  (px)</p>
+          <p>MARGEN INTERNO: padding  (px)</p>
+           <p>BORDES REDONDEADOS: border-radius  (px)</p>
+            <p>TIPO DE FUENTE: font-family</p>
+             <p>FLOTAR A LA IZQUIERDA: float:left;</p>
+             <p>CURSOR MANITO: cursor:pointer;</p>
+              <p>BORDE: border:2px solid (color);</p>
+               <br>
+                <p>los colores se pueden agregar con codigo de color</p>
+                 <p>Ejemplo: NEGRO= #000000;</p>
+                  <p>buscar en google "selector de color"</p>
+    <br>
+    
+  </div>
+
+ 
+
+    <header><h1>CREADOR DE DIVS</h1><h4>Diseño Web - Fabián Angeloni</h4></header>
+
+    <!--NIVEL 1-->
+    <div class="wrap">
+       <h2>NIVEL 1</h2>
+       <br>
+       <p id="parrafo1" class="parrafo"></p>
+
+       <br>
+       <p  class="txt_presionaBoton"></p>
+         <span id="idAyuditaSpam1" class="amarillo" title="" style="cursor: progress;">----AYUDA?----</span>
+     
+
+       <br><br>
+       <div class="contenedor">
+       
+                <div class="editor">
+                  <label>HTML:</label>
+         
+                    <code-input id="html1" class="campoDato" placeholder="Escribí tu DIV en HTML aquí..." template="syntax-highlighted"  lang="html"></code-input>
+
+              </div>
+              <br>
+              <br>
+              <div class="editor">
+                    <label>CSS:</label>
+         
+                       <code-input id="css1" class="campoDato" placeholder="Escribí tu CSS aquí..." template="syntax-highlighted"  lang="css" ></code-input>
+              </div>
+
+
+        <button onclick="probar(1)">Probar</button>
+      </div>
+
+
+        <div class="contenedor">
+          <label>Resultado:</label>
+        
+        <iframe id="resultado1"></iframe>
+        </div>
+    </div>
+    <!--FIN NIVEL 1-->
+  
+
+  <script src="enunciados.js"></script>
+  <script src="scripts.js"></script>  <!-- creacion de los niveles-->
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+
+
+  <script src="footer.js"></script>
+
+
+
+</body></html>
